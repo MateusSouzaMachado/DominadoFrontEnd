@@ -4,14 +4,14 @@ function salvarUsuario(){
         email: document.getElementById("email").value,
         password: document.getElementById("senha").value,
         phone: document.getElementById("telefone").value,
-        birthDate: document.getElementById("dataDeAniversario5").value,
+        birthDate: document.getElementById("dataDeAnivesario").value,
         roles: document.getElementById("perfil").value
     }
     console.log(usuario);
 
     fetch("http://localhost:8080/api/users",{
         method: "POST",
-        headers: {"Contet-Type":"application/json"},
+        headers: {"Content-Type":"application/json"},
         body: JSON.stringify(usuario)
     })
 
